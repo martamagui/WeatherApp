@@ -15,6 +15,8 @@
 		9F00907027EDF47000033D5D /* WeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00906F27EDF47000033D5D /* WeatherAppUITests.swift */; };
 		9F00907227EDF47000033D5D /* WeatherAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00907127EDF47000033D5D /* WeatherAppUITestsLaunchTests.swift */; };
 		9F00907F27EDF6B400033D5D /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00907E27EDF6B400033D5D /* WeatherService.swift */; };
+		9F00908127EDFA7E00033D5D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00908027EDFA7E00033D5D /* Weather.swift */; };
+		9F00908527EDFBD200033D5D /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00908427EDFBD200033D5D /* APIResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		9F00906F27EDF47000033D5D /* WeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITests.swift; sourceTree = "<group>"; };
 		9F00907127EDF47000033D5D /* WeatherAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9F00907E27EDF6B400033D5D /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		9F00908027EDFA7E00033D5D /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		9F00908427EDFBD200033D5D /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +100,10 @@
 		9F00905327EDF46C00033D5D /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				9F00908227EDFB5500033D5D /* data */,
+				9F00908027EDFA7E00033D5D /* Weather.swift */,
 				9F00905427EDF46C00033D5D /* WeatherAppApp.swift */,
 				9F00905627EDF46C00033D5D /* ContentView.swift */,
-				9F00907E27EDF6B400033D5D /* WeatherService.swift */,
 				9F00905827EDF46F00033D5D /* Assets.xcassets */,
 				9F00905A27EDF46F00033D5D /* Preview Content */,
 			);
@@ -128,6 +133,23 @@
 				9F00907127EDF47000033D5D /* WeatherAppUITestsLaunchTests.swift */,
 			);
 			path = WeatherAppUITests;
+			sourceTree = "<group>";
+		};
+		9F00908227EDFB5500033D5D /* data */ = {
+			isa = PBXGroup;
+			children = (
+				9F00908327EDFBAA00033D5D /* Model */,
+				9F00907E27EDF6B400033D5D /* WeatherService.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		9F00908327EDFBAA00033D5D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9F00908427EDFBD200033D5D /* APIResponse.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,8 +282,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F00908127EDFA7E00033D5D /* Weather.swift in Sources */,
 				9F00905727EDF46C00033D5D /* ContentView.swift in Sources */,
 				9F00907F27EDF6B400033D5D /* WeatherService.swift in Sources */,
+				9F00908527EDFBD200033D5D /* APIResponse.swift in Sources */,
 				9F00905527EDF46C00033D5D /* WeatherAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,6 +447,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requitres you location to provide the weather data :)";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -451,6 +476,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requitres you location to provide the weather data :)";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
