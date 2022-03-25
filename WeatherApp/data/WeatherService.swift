@@ -24,7 +24,7 @@ public final class WeatherService: NSObject {
         locationManager.startUpdatingLocation()
     }
     
-    private func getDataRequest(forCoodinates coordiantes: CLLocationCoordinate2D){
+    private func makeDataRequest(forCoodinates coordiantes: CLLocationCoordinate2D){
         guard let urlString = "https://api.openweathermap.org/data/2.5/weather?lat=\(coordiantes.latitude)&lon=\(coordiantes.longitude)&appid=\(API_KEY)&units=metric".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
         guard let url = URL(string: urlString) else {return}
         
@@ -40,8 +40,13 @@ public final class WeatherService: NSObject {
 }
 
 extension WeatherService: CLLocationManagerDelegate {
-    public func locationManager(_ manager: CLLocationManager, didVisit visit: CLVisit) {
-        
+    public func locationManager(_ manager: CLLocationManager, didVisit visit: CLVisit,
+                                didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.first else {return}
+        makeDataRequest(forCoodinates: location.coordinate)
+    }
+    public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error){
+        print("Error: \(error.localizedDescription)")
     }
 }
 
