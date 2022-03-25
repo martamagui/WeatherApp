@@ -14,6 +14,7 @@
 		9F00906627EDF46F00033D5D /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00906527EDF46F00033D5D /* WeatherAppTests.swift */; };
 		9F00907027EDF47000033D5D /* WeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00906F27EDF47000033D5D /* WeatherAppUITests.swift */; };
 		9F00907227EDF47000033D5D /* WeatherAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00907127EDF47000033D5D /* WeatherAppUITestsLaunchTests.swift */; };
+		9F00907F27EDF6B400033D5D /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00907E27EDF6B400033D5D /* WeatherService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		9F00906B27EDF47000033D5D /* WeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F00906F27EDF47000033D5D /* WeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITests.swift; sourceTree = "<group>"; };
 		9F00907127EDF47000033D5D /* WeatherAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9F00907E27EDF6B400033D5D /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				9F00905427EDF46C00033D5D /* WeatherAppApp.swift */,
 				9F00905627EDF46C00033D5D /* ContentView.swift */,
+				9F00907E27EDF6B400033D5D /* WeatherService.swift */,
 				9F00905827EDF46F00033D5D /* Assets.xcassets */,
 				9F00905A27EDF46F00033D5D /* Preview Content */,
 			);
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F00905727EDF46C00033D5D /* ContentView.swift in Sources */,
+				9F00907F27EDF6B400033D5D /* WeatherService.swift in Sources */,
 				9F00905527EDF46C00033D5D /* WeatherAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
