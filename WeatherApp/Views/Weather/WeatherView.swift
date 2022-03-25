@@ -8,24 +8,26 @@
 import SwiftUI
 
 struct WeatherView: View {
+    @ObservedObject var viewModel: WeatherViewModel
+    
     var body: some View {
         VStack{
-            Text("Your location")
+            Text(viewModel.cityName)
                 .font(.largeTitle)
                 .padding()
-            Text("25ºC")
+            Text(viewModel.temperature)
                 .font(.system(size: 70))
                 .bold()
-            Text("🌦")
+            Text(viewModel.weatherIcon)
                 .font(.largeTitle)
                 .padding()
-            Text("Rainy")
-        }
+            Text(viewModel.weatherDescription)
+        }.onAppear(perform: viewModel.refres)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        WeatherView()
+        WeatherView(viewModel: WeatherViewModel(weatherService: WeatherService()))
     }
 }
