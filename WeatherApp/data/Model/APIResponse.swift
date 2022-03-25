@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct APIResponse {
+struct APIResponse: Decodable {
     let name: String
     let main: APIMain
     let weather: [APIWeather]
